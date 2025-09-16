@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Prime Agro Farm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .about-content {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+
+        .about-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about-image:hover {
+            transform: scale(1.02);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .about-text h2 {
+            color: #2e7d32;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .quick-facts {
+            margin-bottom: 80px;
+        }
+
+        .quick-facts h2 {
+            text-align: center;
+            color: #2e7d32;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .fact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #2e7d32;
+        }
+
+        .fact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .fact-icon {
+            width: 60px;
+            height: 60px;
+            background: #2e7d32;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .fact-card h3 {
+            color: #2e7d32;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .fact-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .mission-section {
+            background: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .mission-section h2 {
+            color: #2e7d32;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .mission-section blockquote {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .mission-section cite {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: #2e7d32;
+            font-weight: 600;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-intro {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-text h2 {
+                font-size: 2rem;
+            }
+
+            .facts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Prime Agro Farm</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Prime Agro Farm</h1>
+            <p>Redefining modern dairy and agribusiness in Zirobwe, Luweero</p>
+        </div>
+    </section>
+
+    <main>
+        <!-- About Content -->
+        <section class="about-content">
+            <div class="container">
+                <div class="about-intro fade-in">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Prime Agro Farm - Modern Dairy Farming">
+                    </div>
+                    <div class="about-text">
+                        <h2>Our Story</h2>
+                        <p>Prime Agro Farms Uganda Ltd was established in 2008 by Sebastian Rutah Ngambwa as a family business rooted in a vision: to redefine modern dairy and agribusiness in Zirobwe, Luweero. Starting from just 25 acres and nine cross-breed dairy cows under its earlier name Zirobwe Demonstration Farm (ZIDEFA), the farm has since expanded beyond 250 acres, of which about 100 acres are devoted to silage production — supplying both the farm itself and neighbouring farmers.</p>
+
+                        <p>Using Friesian and Jersey breeds managed under a semi-intensive system (silage, supplement feeds, and grazing), Prime Agro Farm boasts over 250 head of cattle, built modern infrastructure (calf shelters, resting zones, strong water systems) and invests in quality, animal welfare, and value-addition.</p>
+
+                        <p>The farm has also developed a reputation for leadership in agriculture: it was the venue for the 2025 launch of the 11th Best Farmers Competition under the theme "Value Addition with Focus on Large Scale Farmers and Cooperatives," and in 2023 won high honours in that same competition. Additionally, Mr. Ngambwa is committed to mentorship and capacity building — training other farmers in feed production, nourishment, and sustainable practices.</p>
+
+                        <p>With an investment of over UGX 200 million in the early phase, Prime Agro Farm continues to demonstrate how combining innovation, scale, and a community-oriented approach can transform farming from subsistence to prosperity for the region and beyond.</p>
+                    </div>
+                </div>
+
+                <!-- Quick Facts Section -->
+                <section class="quick-facts fade-in">
+                    <h2>Quick Facts</h2>
+                    <div class="facts-grid">
+                        <div class="fact-card">
+                            <div class="fact-icon">👨‍🌾</div>
+                            <h3>Founder / Owner</h3>
+                            <p>Sebastian Rutah Ngambwa</p>
+                        </div>
+                        <div class="fact-card">
+                            <div class="fact-icon">📅</div>
+                            <h3>Founded</h3>
+                            <p>2008 (originally Zirobwe Demonstration Farm)</p>
+                        </div>
+                        <div class="fact-card">
+                            <div class="fact-icon">📍</div>
+                            <h3>Location</h3>
+                            <p>Zirobwe, Luweero District, Uganda</p>
+                        </div>
+                        <div class="fact-card">
+                            <div class="fact-icon">🌾</div>
+                            <h3>Size</h3>
+                            <p>250+ acres (100 acres for silage)</p>
+                        </div>
+                        <div class="fact-card">
+                            <div class="fact-icon">🐄</div>
+                            <h3>Cattle</h3>
+                            <p>250+ Friesian & Jersey breeds</p>
+                        </div>
+                        <div class="fact-card">
+                            <div class="fact-icon">🥛</div>
+                            <h3>Core Products</h3>
+                            <p>Dairy products, Silage, Breeding stock, Training</p>
+                        </div>
+                        <div class="fact-card">
+                            <div class="fact-icon">🏆</div>
+                            <h3>Awards</h3>
+                            <p>Best Farmers Competition 2023 (Winner), Host of 2025 launch</p>
+                        </div>
+                        <div class="fact-card">
+                            <div class="fact-icon">💰</div>
+                            <h3>Investment</h3>
+                            <p>UGX 200M+ in early setup</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section fade-in">
+            <div class="container">
+                <h2>Our Mission</h2>
+                <blockquote>
+                    "Farming is about building communities and inspiring the next generation."
+                </blockquote>
+                <cite>- Sebastian Rutah Ngambwa, Founder</cite>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="products.html">Products</a>
+                    <a href="news.html">News</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="social-media">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe to Newsletter</h4>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <p>&copy; 2023 Prime Agro Farm. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll animations
+        function handleScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Initial check
+        handleScroll();
+
+        // Listen for scroll events
+        window.addEventListener('scroll', handleScroll);
+
+        // Newsletter form handling
+        const newsletterForm = document.getElementById('newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                if (email) {
+                    alert('Thank you for subscribing! We will keep you updated with our latest news.');
+                    this.reset();
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

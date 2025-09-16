@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Prime Agro Farm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Prime Agro Farm</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="two-column">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.525895635445!2d32.681551674424206!3d0.6936984992995414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177c47006a4e753b%3A0x9829280c708808d7!2sPrime%20Agro%20Farms!5e0!3m2!1sen!2sug!4v1757932960899!5m2!1sen!2sug" width="100%" height="350" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div style="margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 8px; border-left: 4px solid #2e7d32;">
+                        <h4 style="margin: 0 0 8px 0; color: #2e7d32; font-size: 1.1em;">Driving Directions</h4>
+                        <p style="margin: 0; font-size: 0.9em; line-height: 1.4; color: #555;">
+                            From Gayaza-Zirobwe Road, turn left onto Zirobwe-Gayaza Rd. At Marion Clinic, branch right onto Marum Road. Continue past Mpangati LC1 Offices and Anthill Foundation Uganda. Prime Agro Farm will be on your left.
+                        </p>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <h3 style="margin-bottom: 20px; color: #2e7d32; text-align: center;">Send us a Message</h3>
+                    <form id="contact-form">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="quick-contact" style="margin-top: 40px; text-align: center;">
+                <h3 style="color: #2e7d32; margin-bottom: 20px;">Quick Contact</h3>
+                <div class="contact-buttons" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://wa.me/+256701945174" class="btn" style="display: inline-block; padding: 12px 20px;">WhatsApp: +256 701 945174</a>
+                    <a href="tel:+256701945174" class="btn" style="display: inline-block; padding: 12px 20px;">Call: +256 701 945174</a>
+                    <a href="mailto:info@primeagro.com" class="btn" style="display: inline-block; padding: 12px 20px;">Email Us</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="products.html">Products</a>
+                    <a href="news.html">News</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="social-media">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe to Newsletter</h4>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <p>&copy; 2023 Prime Agro Farm. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
